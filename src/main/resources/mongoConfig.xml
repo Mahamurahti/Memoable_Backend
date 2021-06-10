@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mongo:mongo-client id="mongoClient" host="localhost" />
+<mongo:db-factory id="mongoDbFactory" dbname="test" mongo-client-ref="mongoClient" />
+
+<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate"> 
+    <constructor-arg ref="mongoDbFactory"/> 
+</bean>
+
+<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+<mongo:repositories 
+  base-package="com.memoable.backend.repository" mongo-template-ref="mongoTemplate"/>

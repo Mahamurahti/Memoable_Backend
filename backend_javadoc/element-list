@@ -1,0 +1,8 @@
+com.memoable.backend
+com.memoable.backend.config
+com.memoable.backend.controller
+com.memoable.backend.filter
+com.memoable.backend.model
+com.memoable.backend.repository
+com.memoable.backend.security
+com.memoable.backend.services
